@@ -1,6 +1,7 @@
 ---
 layout: page
-title: Adopting RESTspec
+title: Adopting
+permalink: /adopting.html
 ---
 
 Adopting RESTspec in your web resource portfolio.
