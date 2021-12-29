@@ -1,0 +1,15 @@
+title: RESTspec.ws 
+#email: cjaccino@gmail.com
+description: The Home of RESTspec
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "" # the base hostname & protocol for your site
+
+
+# Build settings
+markdown: kramdown
+theme: minima
+
+header_pages:
+- specification/index.md
+- adopting.md
+- primer/index.md
