@@ -1,6 +1,6 @@
 ---
 layout: page
-title: specification
+title: Specification
 permalink: /specification/index.html
 ---
 
