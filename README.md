@@ -1,1 +1,1 @@
-# restspec-ws.github.io
+# restspec.github.io
