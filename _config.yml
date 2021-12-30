@@ -10,6 +10,6 @@ markdown: kramdown
 theme: minima
 
 header_pages:
-- specification/index.md
 - adopting.md
+- specification/index.md
 - primer/index.md
