@@ -59,7 +59,8 @@ Web.
 
 While it should be noted that REST does not require HTTP, nor must it 
 be implemented using the familiar technologies used in the modern Web,
-this explanation will center on these technologies.
+this explanation will center on these technologies.  In addition, this
+primer will refer to the HTTP specifications being drafted for 2022 release.
 
 #### What does this have to do with APIs?
 
@@ -69,7 +70,10 @@ the Web and HTTP APIs are separate things.  Under-the-hood, they are not.
 Creating great HTTP APIs requires understanding REST and the reasons why its
 constraints yield such a palette of useful instruments and benefits. 
 
-## REST's Constraints
+
+
+
+## REST's Constraints In Brief
 
 The REST architecture is defined by ten constraints, 
 six primary and four supportive.  Together, the constraints provide 
@@ -92,6 +96,46 @@ Here they are at a glance.
 | Uniform Interface:<br /> **Hypermedia**                                        | The resource and application state transitions available are provided to the client via hypermedia; response messages will provide links.                    |
 | **Code on Demand**                                                       | The server may facilitate client processing by providing supplemental code as needed.                                                                        | 
 
+### Implementing REST
+
+REST's constraints apply not only to the HTTP protocol, but also its use. 
+
+
+
+#### REST in Message Syntax
+
+To implement REST, the _messaging protocol_ must be able to express 
+REST's key elements.  The protocol syntax has been implemented
+several ways - HTTP 1.0, 1.1, 2, and 3 (draft as of Jan 2022).
+Despite the differences, they all support REST's constraints.
+
+In HTTP, we see support in a number of ways:
+- **Client-Server**: Every message is either a request or a response.
+- **Stateless**: HTTP messages is _capable_ of passing messages that 
+support stateless interactions by providing the headers and content 
+to be used to express the resource state and related metadata
+- **Caching**: HTTP's cache-related headers enable responses to 
+explicitly convey response cachability, provide metadata to enable 
+detection of state change, and enable requests to direct
+conditional processing based on cached content and associated
+attributes.
+- **Layered System**: HTTP is designed to be implemented in layers
+and deliberately avoids message processing rules that concern
+themselves beyond the current layer's processing.
+- **Uniform Interface**: HTTP provides a standard set of methods,
+a way to stipulate a URI to provide message context, header for metadata,
+and resource content.
+- **Code On Demand**: Late feature binding through
+code on demand is supported through client support for 
+code-bearing content types.
+
+
+
+## Concepts And Takeaways
+
+
+### Resource-Orientation
+
 Fielding was focused on enabling what he called a "distributed 
 hypermedia system," the browseable web. REST's viability as a 
 foundation for API integrations was a byproduct of it being
@@ -99,5 +143,8 @@ a good architecture style for arbitrary resource
 interactions.  But Fielding was keenly aware of the crucial
 of the significance of _resource orientation_.  According to
 Fielding, "The key abstraction of information in REST is a 
-resource."  
+resource."
 
+
+
+Resource Orientation 
