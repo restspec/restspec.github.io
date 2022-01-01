@@ -72,7 +72,12 @@ constraints yield such a palette of useful instruments and benefits.
 ## REST's Constraints
 
 The REST architecture is defined by ten constraints, 
-six primary and four supportive.  Here they are at a glance.
+six primary and four supportive.  Together, the constraints provide 
+the familiar characteristics of the World Wide Web while
+avoiding architectural pitfalls that could undermine its manageability,
+scalability, and reliability.
+
+Here they are at a glance.
 
 | Constraint                                                               | Definition                                                                                                                                                   |
 |--------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -81,24 +86,18 @@ six primary and four supportive.  Here they are at a glance.
 | **Caching**                                                              | Content explicitly identified as cacheable may be stored and reused by the client or intermediaries.                                                         |
 | **Layered System**                                                       | Message handlers may only concern themselves with interactions with directly adjacent handlers.                                                              |
 | **Uniform Interface**                                                    | Regardless of service or resource, the protocol's interface will be generic.                                                                                 |
-| Uniform Interface: **Identification of Resources**                       | All interactions must be in the context of an identified resource.                                                                                            |
-| Uniform Interface: **Manipulation of Resources through Representations** | Messages are representations of the resource.  They about the current or intended state of the resource.                                                     |
-| Uniform Interface: **Self-descriptive Messages**                         | To enable processing by intermediaries, interactions must be stateless, use standard media types and method semantics, and explicitly indicate cacheability. |    
-| Uniform Interface: **Hypermedia**                                        | The resource and application state transitions available are provided to the client via hypermedia; response messages will provide links.                    |
+| Uniform Interface:<br /> **Identification of Resources**                       | All interactions must be in the context of an identified resource.                                                                                            |
+| Uniform Interface:<br /> **Manipulation of Resources through Representations** | Messages are representations of the resource.  They about the current or intended state of the resource.                                                     |
+| Uniform Interface:<br /> **Self-descriptive Messages**                         | To enable processing by intermediaries, interactions must be stateless, use standard media types and method semantics, and explicitly indicate cacheability. |    
+| Uniform Interface:<br /> **Hypermedia**                                        | The resource and application state transitions available are provided to the client via hypermedia; response messages will provide links.                    |
 | **Code on Demand**                                                       | The server may facilitate client processing by providing supplemental code as needed.                                                                        | 
 
-According to Fielding, REST was developed to enable a "distributed hypermedia system."  In other words, REST makes a _browsable_, interlinked network of disparately-managed media possible.  Browseability is crucial; the use of HTTP for APIs has usually neglected some of RESTs constraints, despite adoption of the term.
+Fielding was focused on enabling what he called a "distributed 
+hypermedia system," the browseable web. REST's viability as a 
+foundation for API integrations was a byproduct of it being
+a good architecture style for arbitrary resource 
+interactions.  But Fielding was keenly aware of the crucial
+of the significance of _resource orientation_.  According to
+Fielding, "The key abstraction of information in REST is a 
+resource."  
 
-#### REST: It's not about APIs
-
-The original designers of the Web were primarily concerned with creating a
-browsable, multimedia, interactable, anarchically manageable,
-scalable network of interconnected documents and resources.  REST was not
-about APIs; API designers adopted REST because it was a good fit for their needs.
-
-BUT, with sufficient analysis, the parallels between Object-Oriented and
-Resource-Oriented design will become apparent. 
-
-
-
-####
