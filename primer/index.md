@@ -57,6 +57,10 @@ management of protocol registries by the Internet Assigned Numbers Authority
 a strong foundation upon which to realize REST and an interactable
 Web.
 
+While it should be noted that REST does not require HTTP, nor must it 
+be implemented using the familiar technologies used in the modern Web,
+this explanation will center on these technologies.
+
 #### What does this have to do with APIs?
 
 If you have this question, it may be coming from the common view that 
@@ -77,36 +81,13 @@ six primary and four supportive.  Here they are at a glance.
 | **Caching**                                                              | Content explicitly identified as cacheable may be stored and reused by the client or intermediaries.                                                         |
 | **Layered System**                                                       | Message handlers may only concern themselves with interactions with directly adjacent handlers.                                                              |
 | **Uniform Interface**                                                    | Regardless of service or resource, the protocol's interface will be generic.                                                                                 |
-| Uniform Interface: **Identification of Resources**                       | All interactions must be in the context of an identified resource                                                                                            |
+| Uniform Interface: **Identification of Resources**                       | All interactions must be in the context of an identified resource.                                                                                            |
 | Uniform Interface: **Manipulation of Resources through Representations** | Messages are representations of the resource.  They about the current or intended state of the resource.                                                     |
 | Uniform Interface: **Self-descriptive Messages**                         | To enable processing by intermediaries, interactions must be stateless, use standard media types and method semantics, and explicitly indicate cacheability. |    
 | Uniform Interface: **Hypermedia**                                        | The resource and application state transitions available are provided to the client via hypermedia; response messages will provide links.                    |
 | **Code on Demand**                                                       | The server may facilitate client processing by providing supplemental code as needed.                                                                        | 
 
-
-
-
-
-**RESTspec Assumptions based on the modern Web practices**:
-- HTTP semantics, specially its methods, response codes, headers,
-  and content negotiation rules govern web communication.
-- Resource Identifiers are URIs.
-- Resource Representations come formatted according to _media types_.
-  Publicly-registered media types may be found in the
-  [IANA Media Type Registry](https://www.iana.org/assignments/media-types/media-types.xhtml).
-  For a client to understand a media type not found in the registry, some
-  mechanism must be provided to enable that client to do so.
-- In practice, message Self-description requires not only on
-  the content of the message being sufficiently informative,
-  but also that the handler of the message be sufficiently
-  qualified to read it.
-- Hypermedia is instrumental in enabling the client and its user to self-direct.
-  Lacking hypermedia, a resource does not support REST.
-
-
-
-
-
+According to Fielding, REST was developed to enable a "distributed hypermedia system."  In other words, REST makes a _browsable_, interlinked network of disparately-managed media possible.  Browseability is crucial; the use of HTTP for APIs has usually neglected some of RESTs constraints, despite adoption of the term.
 
 #### REST: It's not about APIs
 
