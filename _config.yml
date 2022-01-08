@@ -4,11 +4,6 @@ description: The Home of RESTspec
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site
 
-#Minima Author Section
-author:
-  name: Colin Jaccino
-  email: "colin.jaccino@gmail.com"
-
 # Build settings
 markdown: kramdown
 theme: minima
